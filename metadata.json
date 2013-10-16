@@ -1,0 +1,146 @@
+{
+	"name":"Tukana",
+	"thumbnail":"tukana.png",
+	"screenshot":"tukana.png",
+    "tags": {
+    "en": ["photography", "modern", "communication",  "open", "simple", "creative", "sans-serif", "studio", "agency", "production", "film", "performers", "media", "design"],
+    "es": ["fotografico", "moderno", "comunicacion", "abierto", "simple", "creativo", "sans-serif", "estudio", "agencia", "productora", "peliculas", "actores", "comunicacion", "diseño"],
+    "br": ["fotografia", "moderno", "mídia", "aberto", "simples", "criativo", "sans-serif", "estúdio", "agência", "produção", "filme", "performers", "mídia", "design"]
+    },
+	"colorSwatches":
+    {
+        "Swatch 1": {
+            "color1":"#ffffff",
+            "color2":"#f1f1f1",
+            "color3":"#f1f1f1",
+            "color4":"#898989",
+            "color5":"#231f20",
+            "color6":"#898989",
+            "color7":"#ffffff"
+        },
+        "Swatch 2": {
+            "color1":"#ffffff",
+            "color2":"#f1f1f1",
+            "color3":"#bdf3f6",
+            "color4":"#394242",
+            "color5":"#555757",
+            "color6":"#898989",
+            "color7":"#ffffff"
+        },
+        "Swatch 3": {
+            "color1":"#ffffff",
+            "color2":"#f1f1f1",
+            "color3":"#F6F761",
+            "color4":"#898989",
+            "color5":"#231f20",
+            "color6":"#898989",
+            "color7":"#ffffff"
+        },
+        "Swatch 4": {
+            "color1":"#ffffff",
+            "color2":"#f1f1f1",
+            "color3":"#61F761",
+            "color4":"#898989",
+            "color5":"#231f20",
+            "color6":"#898989",
+            "color7":"#ffffff"
+        },
+        "Swatch 5": {
+            "color1":"#ffffff",
+            "color2":"#f1f1f1",
+            "color3":"#FFB0D6",
+            "color4":"#898989",
+            "color5":"#231f20",
+            "color6":"#898989",
+            "color7":"#ffffff"
+        }
+    },
+    "fontSwatch": {
+       "title": "Lato",
+        "font1": {
+            "font-family": "Lato",
+            "font-size": "28px",
+            "font-weight": "400",
+            "line-height": "38px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        },
+        "font2": {
+            "font-family": "Lato",
+            "font-size": "24px",
+            "font-weight": "inherit",
+            "line-height": "34px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        },
+        "font3": {
+            "font-family": "Lato",
+            "font-size": "18px",
+            "font-weight": "inherit",
+            "line-height": "28px",
+            "color": "@color-swatch5",
+            "letter-spacing": "inherit"
+        },
+        "font4": {
+            "font-family": "Lato",
+            "font-size": "15px",
+            "font-weight": "inherit",
+            "line-height": "25px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        },
+        "font5": {
+            "font-family": "Lato",
+            "font-size": "15px",
+            "font-weight": "400",
+            "line-height": "25px",
+            "color": "@color-swatch5",
+            "letter-spacing": "inherit"
+        },
+        "font6": {
+            "font-family": "Lato",
+            "font-size": "14px",
+            "font-weight": "400",
+            "line-height": "24px",
+            "color": "@color-swatch6",
+            "color-hover": "@color-swatch5",
+            "letter-spacing": "inherit",
+            "background-color": "@color-swatch1",
+            "background-color-hover": "@color-swatch1"
+        },
+        "font7": {
+            "font-family": "Lato",
+            "font-size": "15px",
+            "font-weight": "inherit",
+            "line-height": "25px",
+            "color": "@color-swatch5",
+            "letter-spacing": "inherit",
+            "background-color": "@color-swatch3",
+            "background-color-hover": "darken(@color-swatch3,10%)"
+        },
+        "font8": {
+            "font-family": "Lato",
+            "font-size": "15px",
+            "font-weight": "400",
+            "line-height": "25px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        },
+        "font9": {
+            "font-family": "Lato",
+            "font-size": "15px",
+            "font-weight": "400",
+            "line-height": "25px",
+            "color": "@color-swatch5",
+            "letter-spacing": "inherit"
+        },
+        "font10": {
+            "font-family": "Lato",
+            "font-size": "30px",
+            "font-weight": "400",
+            "line-height": "40px",
+            "color": "@color-swatch6",
+            "letter-spacing": "inherit"
+        }
+    }
+}
