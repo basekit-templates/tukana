@@ -1943,7 +1943,83 @@ footer .widget.profile .twitter span {
       padding: 10px 0;
       margin: 0;
     }
+}
 
+// CONSISTANT FORMS
+.widget.profile form fieldset input,
+.widget.contactform fieldset input,
+.widget.signupform fieldset input,
+.widget.contactform fieldset textarea,
+.blog-search-input,
+input[type=email],
+input[type=email].email,
+input[type=search],
+textarea {
+	border: 1px solid darken(@color-swatch2, 10%);
+	background: @color-swatch1;
+	padding: 6px 9px;
+	text-indent: 0;
+	letter-spacing: 0;
+	float: none;
+}
+
+.widget.profile form fieldset input,
+.widget.contactform fieldset input,
+.widget.signupform fieldset input,
+.widget.contactform fieldset textarea,
+input[type=email],
+input[type=email].email,
+input[type=search],
+.blog-search-input,
+.blog-search-submit-button {
+	height: 42px;
+	&:focus {
+		box-shadow: 0 0 5px @color-swatch3;
+	}
+}
+
+.widget.contactform fieldset textarea,
+textarea {
+	resize: vertical;
+	min-height: 200px;
+}
+
+.widget.twitter ul li {
+	float: left;
+	width: 100%;
+}
+
+input[type="search"]::-webkit-search-decoration {
+	display: none;
+}
+
+.widget.profile fieldset button.btn,
+.widget.signupform fieldset button.btn,
+.blog-search-submit-button {
+	padding: 8px 30px 9px 15px;
+	background-position: right -7px center;
+	letter-spacing: 0;
+	background-color: darken(@color-swatch2, 10%);
+	&:hover {
+		background-color: darken(@color-swatch2, 20%);		
+	}
+}
+
+.widget.signupform fieldset input,
+.blog-search-input {
+	width: 90%;
+}
+
+.widget.profile form,
+.widget.signupform,
+.blog-search-form {
+	letter-spacing: -3px;
+}
+
+.widget.signupform fieldset label,
+.blog-search-form label {
+	letter-spacing: 0;
+	display: block;
 }
 
 @media only screen and (min-width: 1140px) { 
