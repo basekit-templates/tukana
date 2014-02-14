@@ -49,6 +49,9 @@ h2 {
     line-height: @font-swatch2-line-height;
     color: @font-swatch2-color;
     letter-spacing: @font-swatch2-letter-spacing;
+    a {
+    	font-size: @font-swatch2-font-size;	    
+    }
 }
 
 h3 {
@@ -58,8 +61,6 @@ h3 {
     color: @font-swatch3-color;
     line-height: @font-swatch3-line-height;
     letter-spacing: @font-swatch3-letter-spacing;
-    //background-color: @color-swatch3;
-    padding: 2px 5px 2px;
 }
 
 h4 {
@@ -95,18 +96,18 @@ blockquote {
     padding: 20px;
     margin:20px;
     quotes: "\201C""\201D""\2018""\2019";
-    font-family:@font-swatch4-font-family;
-    font-size:@font-swatch5-font-size;
-    font-weight:@font-swatch4-font-weight;
-    line-height:@font-swatch4-line-height;
-    color:@color-swatch4;
+    font-family:@font-swatch3-font-family;
+    font-size:@font-swatch3-font-size;
+    font-weight:@font-swatch3-font-weight;
+    line-height:@font-swatch3-line-height;
+    color:@color-swatch6;
 }
 
 blockquote:before {
-    font-family: georgia;
-    color: #FF0000;
+    font-family: Arial, serif;
+    color: @color-swatch4;
     content: open-quote;
-    font-size: 4em;
+    font-size: 2em;
     line-height: .1em;
     margin-right: .1em;
     vertical-align: -.4em;
@@ -135,12 +136,15 @@ ul, ol, li {
   text-indent: -1.4em;
 }
 
+form, .widget.blogsearch {
+	clear: both;
+}
+
 /* ===============================
    CUSTOM CSS
    =============================== */
 
 .main {
-    padding: 5em 0;
     border-bottom: 1px solid darken(@color-swatch2,10%);
 }
 
@@ -756,7 +760,7 @@ hr.line.align-right {
    =============================== */
 
 .widget.gallery {
-
+	margin-left: 0;
 }
 
 .widget.gallery ul {
@@ -887,14 +891,18 @@ hr.line.align-right {
 }
 
 .widget.clicktocall a {
-    padding: 10px 0;
-    font-family: @font-swatch5-font-family;
-    font-size: @font-swatch5-font-size;
-    font-weight: @font-swatch5-font-weight;
-    line-height: @font-swatch5-line-height;
-    color: @font-swatch5-color;
-    letter-spacing: @font-swatch5-letter-spacing;
-    text-decoration: none;
+	display: inline-block;
+	padding: 10px 0;
+	font-family: @font-swatch5-font-family;
+	font-size: @font-swatch5-font-size;
+	font-weight: @font-swatch5-font-weight;
+	line-height: @font-swatch5-line-height;
+	color: @font-swatch5-color;
+	letter-spacing: @font-swatch5-letter-spacing;
+	text-decoration: none;
+	&:hover {
+		background-color: @font-swatch7-background-color-hover;
+	}
 }
 
 .widget.clicktocall a:hover {
@@ -1026,7 +1034,7 @@ hr.line.align-right {
     box-shadow: 0 0 5px @color-swatch3;
 }
 
-.widget.contactform fieldset button.btn, .blog-search-submit-button {
+.widget.contactform fieldset button.btn, .blog-search-submit-button, .widget.clicktocall a {
     padding: 20px 40px 20px 22px;
     margin: 0;
     border: none;
@@ -1602,6 +1610,9 @@ footer .widget.profile .twitter span {
     border-radius:10px;
     font-size:0;
     text-indent: -99999px;
+    &:after {
+	    display: none;
+    }
 }
 
 .widget.responsiveslideshow .slideshow-widget:hover .btn-play.pause
@@ -1858,8 +1869,11 @@ footer .widget.profile .twitter span {
 
   /* CLICK TO CALL */
 
-  .widget.clicktocall {
+.widget.clicktocall {
   padding: 10px 0;
+  a {
+	  display: inline-block;
+  }
 }
 
 .widget.clicktocall a {
@@ -1996,12 +2010,13 @@ input[type="search"]::-webkit-search-decoration {
 .widget.profile fieldset button.btn,
 .widget.signupform fieldset button.btn,
 .blog-search-submit-button {
+	cursor: pointer;
 	padding: 8px 30px 9px 15px;
 	background-position: right -7px center;
 	letter-spacing: 0;
 	background-color: darken(@color-swatch2, 10%);
 	&:hover {
-		background-color: darken(@color-swatch2, 20%);		
+		background-color: darken(@color-swatch2, 20%);
 	}
 }
 
@@ -2022,12 +2037,147 @@ input[type="search"]::-webkit-search-decoration {
 	display: block;
 }
 
+// FIXES
+.blog-post-feature-image-wrap, .menu-item-image-wrap {
+	line-height: 0;
+}
+
+/* ===============================
+   4. Menu
+   =============================== */
+ 
+.menu-items {
+	width: 100%;
+	
+	list-style: none;
+	margin: 20px 0 50px 0;
+	float: left;
+	clear: both;
+	
+	-webkit-column-count: 2;
+	-webkit-column-gap: 4em;
+	-webkit-column-rule-color: @color-swatch2;
+	-webkit-column-rule-style: solid;
+	-webkit-column-rule-width: 2px;
+	
+	-moz-column-count: 2;
+	-moz-column-gap: 4em;
+	-moz-column-rule-color: @color-swatch2;
+	-moz-column-rule-style: solid;
+	-moz-column-rule-width: 2px;
+	
+	column-count: 2;
+	column-gap: 4em;	
+	column-rule-color: @color-swatch2;
+	column-rule-style: solid;
+	column-rule-width: 2px;
+	@media @mobile {
+		-webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;  
+    }
+	
+	.menu-item {
+		padding: 1px 20px 45px;
+	}
+	li.menu-item-promoted {
+		padding: 15px;
+		background: lighten(@color-swatch2, 3%);
+	}
+	> * {
+		break-inside: avoid;
+		-webkit-column-break-inside: avoid;
+		-moz-column-break-inside: avoid;
+		-ms-column-break-inside: avoid;
+		-o-column-break-inside: avoid;
+		page-break-inside: avoid;
+	}
+	&.odd {
+		-webkit-column-count: 3;
+		-moz-column-count: 3;
+		column-count: 3;
+		@media @mobile {
+			-webkit-column-count: 1;
+            -moz-column-count: 1;
+            column-count: 1;  
+        }
+		&.bk1-columns {
+			-webkit-column-count: 1;
+			-moz-column-count: 1;
+			column-count: 1;
+		}
+	}
+}
+
+.wrapper .wrapper {
+	width: 100%;
+	margin: 0;
+}
+
+.menu .menu-subsection {
+	clear: both;
+	float: left;
+	padding: 0;
+}
+
+.widget.menu {
+	.main {
+		border: 0;
+	}
+}
+
+.menu-item-image-wrap {
+	width: 100%;
+	height: 250px;
+	background-size: cover;
+	background-position: center;
+	border: 1px solid @color-swatch2;
+	box-shadow: inset 0 0 0 3px @color-swatch1;
+	img {
+		display: none;
+	}
+}
+
+.menu .menu-section-item-dietary-props {
+	.dietary-icon {
+		border: 1px solid @color-swatch2;
+		background: @color-swatch1;
+		border-radius: 2px;
+		padding: 2px 6px;
+	}
+}
+
 @media only screen and (min-width: 1140px) { 
     .wrapper {
         width: 960px;
         /* 1140px - 10% for margins */
         margin: 0 auto;
     }
+}
+
+// BLOG
+
+.blog-post-feature-image-wrap {
+	background-image: url('http://placehold.it/2250x800');
+	float: right;
+	width: 50%;
+	margin-left: 5%;
+	background-size: cover;
+	background-position: center;
+	height: 220px;
+	img {
+		display: none;
+	}
+}
+
+.blog-post-published-date {
+	display: block;
+}
+
+.blog-post-item {
+	float: left;
+	width: 100%;
+	padding-bottom: 40px;
 }
 
 .clearfix:before,
@@ -2042,4 +2192,10 @@ input[type="search"]::-webkit-search-decoration {
 
 .clearfix {
     *zoom: 1
+}
+
+@media @tablet {
+	.widget .extendednavigation a.pull:after {
+		box-shadow: none;
+	}
 }
