@@ -2,45 +2,20 @@
 
 {% block content %}
 
-
-<header class="bk-header">
-    <div class="wrapper clearfix">
-        <div class="companyheader clearfix">
-            {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
-            {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
-        </div>
-        {{widget('extendednavigation', 'navigationheader', {})|raw}}
-    </div>
-</header>
-
 <div class="feature">
-<div class="feature-img-one">
-   {{widget('image', 'image1', { 'src': asset('/images/1.jpg'), 'title': 'Lorem ipsum', 'description': 'Duis aute irure dolor in reprenaderites inat voluptate velit', 'alt': '', 'fileName': '1.jpg', 'fileSize': '58kb', 'imageSize': '701 x 447', 'imageWidth': '100%'})|raw}}
-</div>
-<div class="feature-img-two">
-    {{widget('image', 'image2', { 'src': asset('/images/2.jpg'), 'title': 'Teusmod quempor', 'description': 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit','alt': '', 'fileName': '2.jpg', 'fileSize': '58kb', 'imageSize': '350 x 311', 'imageWidth': '100%'})|raw}}
-</div>
-<div class="feature-img-three">
-     {{widget('image', 'image3', { 'src': asset('/images/3.jpg'), 'title': 'labore et doperle', 'description': 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. Nisi ut aliquip cupidatat non proident exercitation', 'alt': '', 'fileName': '3.jpg', 'fileSize': '58kb', 'imageSize': '442 x 296', 'imageWidth': '100%'})|raw}}
-</div>
+	<div class="feature-img-one">
+		{{widget('image', 'image1', { 'src': asset('/images/1.jpg'), 'title': 'Lorem ipsum', 'description': 'Duis aute irure dolor in reprenaderites inat voluptate velit', 'alt': '', 'fileName': '1.jpg', 'fileSize': '58kb', 'imageSize': '701 x 447', 'imageWidth': '100%'})|raw}}
+	</div>
+	<div class="feature-img-two">
+		{{widget('image', 'image2', { 'src': asset('/images/2.jpg'), 'title': 'Teusmod quempor', 'description': 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit','alt': '', 'fileName': '2.jpg', 'fileSize': '58kb', 'imageSize': '350 x 311', 'imageWidth': '100%'})|raw}}
+	</div>
+	<div class="feature-img-three">
+		{{widget('image', 'image3', { 'src': asset('/images/3.jpg'), 'title': 'labore et doperle', 'description': 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. Nisi ut aliquip cupidatat non proident exercitation', 'alt': '', 'fileName': '3.jpg', 'fileSize': '58kb', 'imageSize': '442 x 296', 'imageWidth': '100%'})|raw}}
+	</div>
 </div>
 
 <div class="main wrapper clearfix">
- {{zone('main')|raw}}
-</div>  
-
-<footer class="bk-footer">
-    <div class="wrapper clearfix">
-        <div class="responsivecolumns columns-two-50-50">
-           <div class="column columns-two-left">
-                {{widget('profile', 'footercolumn1profileEmail', { 'profileType':'email', 'email':'profile'})|raw}}
-           </div>
-           <div class="column columns-two-right">
-                {{widget('profile', 'footercolumn2profilePhone', { 'profileType':'phone', 'phone':'profile'})|raw}} 
-           </div>
-        </div>
-    </div>
-</footer>
-
+	{{zone('main')|raw}}
+</div>
 
 {% endblock %}
