@@ -274,7 +274,7 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
 }
 
 .widget.extendednavigation a.pull {
-    display: none;
+    top:-58px;
 }
 
 .widget.extendednavigation ul {
@@ -1680,32 +1680,6 @@ footer .widget.profile .twitter span {
         min-height: 22px;
     }
 
-     /* NAV ICON */
-
-  .widget .extendednavigation a.pull {
-    display: block;
-    width: 100%;
-    position: absolute;
-    top: 0;
-	width: 22px;
-	height: 22px;
-}
-
-
-    .widget .extendednavigation a.pull:after {
-    content:"";
-    background: image('/images/nav-icon.png') no-repeat center;
-    width: 100%;
-    height: 100%;
-    display: inline-block;
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-
-  /* NAV */
-
-  
  .widget .extendednavigation ul {
     width: 100%;
     display: none;
@@ -2194,10 +2168,4 @@ input[type="search"]::-webkit-search-decoration {
 
 .clearfix {
     *zoom: 1
-}
-
-@media @tablet {
-	.widget .extendednavigation a.pull:after {
-		box-shadow: none;
-	}
 }
