@@ -401,11 +401,15 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
    =============================== */
 
  .feature {
-  width: 960px;
+  width: 90%;
   height: auto;
-  margin: 0 auto;
+  margin: 0 5%;
   overflow: hidden;
   position: relative;
+  @media only screen and (min-width: 1140px) {
+    width: 960px;
+    margin: 0 auto;
+  }
  }
 
  /* IMAGE 1 */
@@ -468,6 +472,7 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
 .feature-img-two .widget.image span.image-title, .feature-img-two .widget.image span.image-description {
   width: 33%;
   margin-left: 3%;
+  text-align: left;
 }
 
 .feature-img-two .widget.image span.image-title {
@@ -502,6 +507,7 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
 .feature-img-three .widget.image span.image-title, .feature-img-three .widget.image span.image-description {
     float: left;
     width: 91%;
+    text-align: left;
 }
 
 .feature-img-three .widget.image span.image-title {
@@ -538,6 +544,35 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
   line-height:bkscale(@font-swatch9-line-height,0.8);
   color: @font-swatch9-color;
   letter-spacing: @font-swatch9-letter-spacing;
+}
+
+
+/* small screens */
+
+@media only screen and (max-width: 750px) {
+  .feature-img-one, .feature-img-one .image-img, .feature-img-one .widget.image span.image-title, .feature-img-one .widget.image span.image-description,
+  .feature-img-two, .feature-img-two .image-img, .feature-img-two .widget.image span.image-title, .feature-img-two .widget.image span.image-description,
+  .feature-img-three, .feature-img-three .image-img, .feature-img-three .widget.image span.image-title, .feature-img-three .widget.image span.image-description {
+    width: 100%;
+    float: left;
+    position: relative;
+    background-image: none;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+  }
+
+  .feature-img-one .widget.image span.image-title,
+  .feature-img-two .widget.image span.image-title,
+  .feature-img-three .widget.image span.image-title {
+    margin: 5px 0 0;
+  }
+
+  .feature-img-one .widget.image span.image-description,
+  .feature-img-two .widget.image span.image-description,
+  .feature-img-three .widget.image span.image-description {
+    margin: 0 0 7px;
+  }
 }
 
 
@@ -1759,13 +1794,6 @@ footer .widget.profile .twitter span {
   }
 
 
-    /* FEATURE */
-
-   .feature {
-    width: 90%;
-    margin: 0 5%;
-   }
-
      /* GALLERY */
 
     .widget.gallery li span.inner .title, .widget.gallery li span.inner .description {
@@ -1812,37 +1840,6 @@ footer .widget.profile .twitter span {
       font-size: bkscale(@font-swatch10-font-size,0.7);
       line-height: bkscale(@font-swatch10-line-height,0.7);
     }
-
-
-
-
-    /* FEATURE */
-
-
-.feature-img-one, .feature-img-one .image-img, .feature-img-one .widget.image span.image-title, .feature-img-one .widget.image span.image-description,
-.feature-img-two, .feature-img-two .image-img, .feature-img-two .widget.image span.image-title, .feature-img-two .widget.image span.image-description,
-.feature-img-three, .feature-img-three .image-img, .feature-img-three .widget.image span.image-title, .feature-img-three .widget.image span.image-description {
-  width: 100%;
-  float: left;
-  position: relative;
-  background-image: none;
-  text-align: left;
-  padding: 0;
-  margin: 0;
-}
-
-.feature-img-one .widget.image span.image-title,
-.feature-img-two .widget.image span.image-title,
-.feature-img-three .widget.image span.image-title {
-  margin: 5px 0 0;
-}
-
-.feature-img-one .widget.image span.image-description,
-.feature-img-two .widget.image span.image-description,
-.feature-img-three .widget.image span.image-description {
-  margin: 0 0 7px;
-}
-
 
 
   /* CLICK TO CALL */
