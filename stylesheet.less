@@ -411,6 +411,9 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
     width: 960px;
     margin: 0 auto;
   }
+  @media only screen and (max-width: 750px) {
+    padding: 0;
+  }
  }
 
  /* IMAGE 1 */
@@ -551,9 +554,19 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
 /* small screens */
 
 @media only screen and (max-width: 750px) {
-  .feature-img-one, .feature-img-one .image-img, .feature-img-one .widget.image span.image-title, .feature-img-one .widget.image span.image-description,
-  .feature-img-two, .feature-img-two .image-img, .feature-img-two .widget.image span.image-title, .feature-img-two .widget.image span.image-description,
-  .feature-img-three, .feature-img-three .image-img, .feature-img-three .widget.image span.image-title, .feature-img-three .widget.image span.image-description {
+  .feature-img-one, .feature-img-two, .feature-img-three {
+    margin: 0 0 2em;
+    width: 100%;
+    float: left;
+    position: relative;
+    background-image: none;
+    text-align: left;
+    padding: 0;
+  }
+
+  .feature-img-one .image-img, .feature-img-one .widget.image span.image-title, .feature-img-one .widget.image span.image-description,
+  .feature-img-two .image-img, .feature-img-two .widget.image span.image-title, .feature-img-two .widget.image span.image-description,
+  .feature-img-three .image-img, .feature-img-three .widget.image span.image-title, .feature-img-three .widget.image span.image-description {
     width: 100%;
     float: left;
     position: relative;
