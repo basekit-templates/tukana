@@ -170,7 +170,6 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
     display: block;
     float: left;
     padding: 0;
-	  max-width: 90%;
 }
 
 /* COMPANY NAME */
@@ -270,7 +269,7 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
 .widget.extendednavigation {
     float: right;
     position: relative;
-    width: 75%;
+    max-width: 691px;
     margin: 12px 0;
 }
 
@@ -279,6 +278,7 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
 }
 
 .widget.extendednavigation ul {
+    float: left;
     margin: 0;
     padding: 0;
 }
@@ -401,19 +401,11 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
    =============================== */
 
  .feature {
-  width: 90%;
+  width: 960px;
   height: auto;
-  margin: 0 5%;
+  margin: 0 auto;
   overflow: hidden;
   position: relative;
-  padding: 2em 0;
-  @media only screen and (min-width: 1140px) {
-    width: 960px;
-    margin: 0 auto;
-  }
-  @media only screen and (max-width: 750px) {
-    padding: 0;
-  }
  }
 
  /* IMAGE 1 */
@@ -476,7 +468,6 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
 .feature-img-two .widget.image span.image-title, .feature-img-two .widget.image span.image-description {
   width: 33%;
   margin-left: 3%;
-  text-align: left;
 }
 
 .feature-img-two .widget.image span.image-title {
@@ -511,7 +502,6 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
 .feature-img-three .widget.image span.image-title, .feature-img-three .widget.image span.image-description {
     float: left;
     width: 91%;
-    text-align: left;
 }
 
 .feature-img-three .widget.image span.image-title {
@@ -548,45 +538,6 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
   line-height:bkscale(@font-swatch9-line-height,0.8);
   color: @font-swatch9-color;
   letter-spacing: @font-swatch9-letter-spacing;
-}
-
-
-/* small screens */
-
-@media only screen and (max-width: 750px) {
-  .feature-img-one, .feature-img-two, .feature-img-three {
-    margin: 0 0 2em;
-    width: 100%;
-    float: left;
-    position: relative;
-    background-image: none;
-    text-align: left;
-    padding: 0;
-  }
-
-  .feature-img-one .image-img, .feature-img-one .widget.image span.image-title, .feature-img-one .widget.image span.image-description,
-  .feature-img-two .image-img, .feature-img-two .widget.image span.image-title, .feature-img-two .widget.image span.image-description,
-  .feature-img-three .image-img, .feature-img-three .widget.image span.image-title, .feature-img-three .widget.image span.image-description {
-    width: 100%;
-    float: left;
-    position: relative;
-    background-image: none;
-    text-align: left;
-    padding: 0;
-    margin: 0;
-  }
-
-  .feature-img-one .widget.image span.image-title,
-  .feature-img-two .widget.image span.image-title,
-  .feature-img-three .widget.image span.image-title {
-    margin: 5px 0 0;
-  }
-
-  .feature-img-one .widget.image span.image-description,
-  .feature-img-two .widget.image span.image-description,
-  .feature-img-three .widget.image span.image-description {
-    margin: 0 0 7px;
-  }
 }
 
 
@@ -1198,71 +1149,56 @@ hr.line.align-right {
    SOCIAL BAR WIDGET / PROFILE DATA
    =============================== */
 
-.widget.socialicons {
-    padding: 0;
+.widget.profile .bk-profile-socialicons {
+    text-align: center;
     font-size:1em;
     font-family:@font-swatch7-font-family;
-}
-
-.widget.socialicons a {
-    text-decoration: none;
-    text-indent: -9999px;
-    white-space: nowrap;
-    height: 33px;
-    width: 33px;
-    background-color: @color-swatch2;
-    background-size: 18px;
-    -webkit-border-radius: 50px;
-    -moz-border-radius: 50px;
-    border-radius: 50px;
-}
-
-.widget.socialicons a:hover, .bk-profile-socialicons span a:hover {
-    background-color: darken(@color-swatch2,10%);
+    margin:0;
+    a {
+        text-decoration: none;
+        text-indent: -9999px;
+        white-space: nowrap;
+        height: 33px;
+        width: 33px;
+        background-size: 18px;
+        &:hover {
+        background-color:@color-swatch1;
+        }
+    }
+    span {
+        display: inline;
+        padding: 0;
+        font-size:1em;
+        font-family:@font-swatch7-font-family;
+        a {
+            display: inline-block;
+            text-decoration: none;
+            text-indent: -9999px;
+            white-space: nowrap;
+            height: 33px;
+            width: 33px;
+            border: none;
+            background-position: center;
+            margin-bottom: 6px;
+            margin-right: 0px;
+            background-size: 22px;
+            background-repeat: no-repeat;
+            background-color: @color-swatch2;
+            border-radius:20px;
+            &:hover {
+              background-color: darken(@color-swatch3,5%);
+              border-radius:20px;
+            }
+        }
+    }
 }
 
 .widget.socialicons span a {
-    display: inline-block;
-    margin-right: 6px;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin-bottom: 6px;
-}
-
-/* SOCIAL ICONS - PROFILE DATA */
-
-
-.widget.profile .bk-profile-socialicons span {
-    display: inline;
-    padding: 0;
-    font-size:1em;
-    font-family:@font-swatch7-font-family;
-}
-
-.widget.profile .bk-profile-socialicons span a {
-  display: inline-block;
-    text-decoration: none;
-    text-indent: -9999px;
-    white-space: nowrap;
-    height: 33px;
-    width: 33px;
-    border: none;
-    background-position: center;
-    margin-bottom: 6px;
-    border: none;
-    -webkit-border-radius: 50px;
-    -moz-border-radius: 50px;
-    border-radius: 50px;
-}
-
-.widget.profile .bk-profile-socialicons span a:hover {
-  background-color: darken(@color-swatch7,5%);
-}
-
-.bk-profile-socialicons span a {
-    display: inline-block;
-    margin-right: 6px;
-    background-repeat: no-repeat;
+    background-color: @color-swatch3;
+    border-radius: 20px;
+    &:hover {
+        background-color: darken(@color-swatch3,5%);
+    };
 }
 
 /* SVG ICONS */
@@ -1808,6 +1744,13 @@ footer .widget.profile .twitter span {
   }
 
 
+    /* FEATURE */
+
+   .feature {
+    width: 90%;
+    margin: 0 5%;
+   }
+
      /* GALLERY */
 
     .widget.gallery li span.inner .title, .widget.gallery li span.inner .description {
@@ -1854,6 +1797,37 @@ footer .widget.profile .twitter span {
       font-size: bkscale(@font-swatch10-font-size,0.7);
       line-height: bkscale(@font-swatch10-line-height,0.7);
     }
+
+
+
+
+    /* FEATURE */
+
+
+.feature-img-one, .feature-img-one .image-img, .feature-img-one .widget.image span.image-title, .feature-img-one .widget.image span.image-description,
+.feature-img-two, .feature-img-two .image-img, .feature-img-two .widget.image span.image-title, .feature-img-two .widget.image span.image-description,
+.feature-img-three, .feature-img-three .image-img, .feature-img-three .widget.image span.image-title, .feature-img-three .widget.image span.image-description {
+  width: 100%;
+  float: left;
+  position: relative;
+  background-image: none;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+}
+
+.feature-img-one .widget.image span.image-title,
+.feature-img-two .widget.image span.image-title,
+.feature-img-three .widget.image span.image-title {
+  margin: 5px 0 0;
+}
+
+.feature-img-one .widget.image span.image-description,
+.feature-img-two .widget.image span.image-description,
+.feature-img-three .widget.image span.image-description {
+  margin: 0 0 7px;
+}
+
 
 
   /* CLICK TO CALL */
