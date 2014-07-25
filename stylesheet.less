@@ -170,6 +170,9 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
     display: block;
     float: left;
     padding: 0;
+    @media @tablet {
+      padding-right: 40px;
+    }
 }
 
 /* COMPANY NAME */
@@ -401,7 +404,8 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
    =============================== */
 
  .feature {
-  width: 960px;
+  max-width: 980px;
+  padding: 0 10px;
   height: auto;
   margin: 0 auto;
   overflow: hidden;
@@ -1159,6 +1163,7 @@ hr.line.align-right {
     a {
         text-decoration: none;
         text-indent: 9999px;
+        overflow: hidden;
         white-space: nowrap;
         height: 33px;
         width: 33px;
@@ -1585,6 +1590,11 @@ footer .widget.profile .twitter span {
     width: 100%;
 }
 
+.widget.responsiveslideshow .title + .description {
+  padding-top: 0;
+  margin-top: -0.3em;
+}
+
 .widget.responsiveslideshow .slideshow-widget .btn-prev, 
 .widget.responsiveslideshow .slideshow-widget .btn-next {
     font-size: 0;
@@ -1766,14 +1776,9 @@ footer .widget.profile .twitter span {
    .feature {
     width: 90%;
     margin: 0 5%;
+    padding: 0;
    }
 
-     /* GALLERY */
-
-    .widget.gallery li span.inner .title, .widget.gallery li span.inner .description {
-    font-size:bkscale(@font-swatch5-font-size,0.9);
-    line-height:bkscale(@font-swatch5-line-height,0.9);
-    }
 
     /* SLIDESHOW */
 
@@ -1925,10 +1930,6 @@ footer .widget.profile .twitter span {
 
      /* GALLERY */
 
-    .widget.gallery li span.inner .title, .widget.gallery li span.inner .description {
-      max-height: 150px;
-    }
-
     .widget.gallery ul.gallery-widget li
     {
       width: 50%;
@@ -1968,7 +1969,7 @@ input[type=email].email,
 input[type=search],
 .blog-search-input,
 .blog-search-submit-button {
-	height: 42px;
+	height: 41px;
 	&:focus {
 		box-shadow: 0 0 5px @color-swatch3;
 	}
@@ -1980,10 +1981,48 @@ textarea {
 	min-height: 200px;
 }
 
-.widget.twitter ul li {
-	float: left;
-	width: 100%;
+
+// ======= Widget: Twitter
+.widget.twitter {
+  ul.twitter {
+    li {
+      float: left;
+      width: 100%;
+
+      // footer
+      a, time + span, time {
+        font-size: bkscale(@font-swatch5-font-size, 0.8);
+        font-family: @font-swatch5-font-family;
+        line-height: 1;
+        font-weight: normal;
+        color: fade(@color-swatch5,50%);
+        text-decoration: none;
+        @media @mobile {
+          font-size: bkscale(@font-swatch5-font-size, 0.6);
+        }
+      }
+      
+      .twitter-content {
+        p {
+          font-family: @font-swatch5-font-family;
+          a {
+            font-family: @font-swatch5-font-family;
+            font-size: @font-swatch5-font-size;
+            color: @color-swatch6;
+            line-height: @font-swatch5-line-height;
+          }
+        }
+        .bk-full-name {
+          font-size: bkscale(@font-swatch5-font-size, 1);
+          @media @mobile {
+            font-size: bkscale(@font-swatch5-font-size, 0.8);
+          }
+        }
+      }
+    }
+  }
 }
+
 
 input[type="search"]::-webkit-search-decoration {
 	display: none;
@@ -2097,9 +2136,18 @@ input[type="search"]::-webkit-search-decoration {
 }
 
 .menu .menu-subsection {
+  
 	clear: both;
 	float: left;
 	padding: 0;
+  .menu-subsection-promoted {
+    .clearfix;
+    padding: 15px;
+    background: lighten(@color-swatch2, 3%);
+    .menu-items {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .widget.menu {
@@ -2147,6 +2195,14 @@ input[type="search"]::-webkit-search-decoration {
 	background-size: cover;
 	background-position: center;
 	height: 220px;
+
+  @media @mobile {
+    float: none;
+    width: auto;
+    margin-left: 0;
+    margin-bottom: 0.5em;
+  }
+
 	img {
 		display: none;
 	}
@@ -2175,3 +2231,113 @@ input[type="search"]::-webkit-search-decoration {
 .clearfix {
     *zoom: 1
 }
+
+
+// ECOM
+.widget.ecombasket .ecombasket-pull p:before, .widget.ecomproduct .ecom-product .btn.ecom-product-add-to-cart-btn .text:before {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAPCAYAAAACsSQRAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyNpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MzA0NzQ2MTNGQTA4MTFFM0E5NDJGMkM1NzYzNjQzN0QiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MzA0NzQ2MTJGQTA4MTFFM0E5NDJGMkM1NzYzNjQzN0QiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChNYWNpbnRvc2gpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6OEE4MDZFRkNBRDEwMTFFMzlCOEQ4MTYxOEVDOTBFNzAiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6OEE4MDZFRkRBRDEwMTFFMzlCOEQ4MTYxOEVDOTBFNzAiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5W5Ij9AAAA7ElEQVR42mJgYGB4AcT/ofgZEDP+//+fgRgMBWwgghOIBYBYAmqQCAmGCAPxd3TBnUiuIhZPZGJABZsYSAdL0V1iQIZL2NAN4SXRgD1gfVhC+ycJhgRgGAI1aCkBjb+BeBcQFwMxK0gPC5aAOg7EUVD2QyDeCMSHgfgyED8B4q9IrgYDbIaA4t4XiLcDFf8lJnoY0U1lZGQ8D6ROA/F9IvRPAer/jM0QKSAlTkAzSNMXkEVg12IJWD5ouPSDVWPKewHxVSA2h4thURSLFBN8WOTfQ+WO4zNEEBoLK7DlaCAIA2c6BgYHmBhAgAEA3N89ItZnc8UAAAAASUVORK5CYII=);
+}
+
+.widget.ecomproduct .ecom-product .btn.ecom-product-add-to-cart-btn.added {
+  background-color: @color-swatch3;
+}
+
+.widget.ecomproduct .ecom-product .btn.ecom-product-add-to-cart-btn.added .text:before {
+  color: #000;
+}
+
+.widget.ecomproduct .ecom-product .btn.ecom-product-go-to-checkout-btn {
+  background-color: @font-swatch7-background-color;
+  color: @font-swatch7-color;
+}
+
+.widget.ecomproduct .ecom-product .ecom-product-long-description {
+  margin-top: 1em;
+}
+
+
+
+
+.widget.ecomproductslist {
+  .ecom-productslist-products {
+    // Filter
+    .productlist-filter {
+      .productlist-display-form {
+        .clearfix;
+        margin-bottom: 1em;
+        text-align: center;
+        .form-group {
+          margin-right: 0.5em;
+          margin-left: 0.5em;
+          display: inline-block;
+          vertical-align: center;
+          @media @mobile {
+            display: block;
+            margin-bottom: 10px;
+          }
+          label {
+            display: block;
+            font-size: bkscale(@font-swatch5-font-size, 0.8);
+            text-align: center;
+            @media @mobile {
+              text-align: left;
+            }
+          }
+          select {
+            -moz-appearance: none;
+            text-indent: 0.01px;
+            -webkit-appearance: none;
+            text-overflow: '';
+            cursor: pointer;
+            position: relative;
+            background-repeat: no-repeat;
+            background-position: right center;
+            margin: 0;
+            color: @color-swatch5;
+            position: relative;
+            display: inline-block;
+            font-family: @font-swatch7-font-family;
+            font-size: @font-swatch7-font-size;
+            font-weight: @font-swatch7-font-weight;
+            line-height: 1;
+            border-radius: 0;
+            webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            border: 1px solid darken(@color-swatch2, 10%);
+            background-color: @color-swatch1;
+            padding: 8px 38px 8px 14px;
+            text-indent: 0;
+            letter-spacing: 0;
+            float: none;
+            height: 41px;
+           background-image: image('/images/ui-select-arrow.png');
+
+            @media @mobile {
+              display: block;
+              width: 100%;
+            }
+          }
+        }
+      }
+      .productlist-item-count {
+        text-align: center;
+        clear: both;
+      }
+    }
+  }
+}
+
+
+.svg {
+  .widget.ecomproductslist .ecom-productslist-products .productlist-filter .productlist-display-form .form-group select {
+    background-image: image('/images/ui-select-arrow.svg');
+    background-repeat: no-repeat;
+    background-size: 15px;
+    background-position-x: 93%;
+    background-position-y: 55%;
+  }
+}
+
+
+
