@@ -3,6 +3,7 @@
 	"thumbnail":"tukana.png",
 	"screenshot":"tukana.png",
     "templateType":"standard",
+    "pageTypes": ["home"], 
     
     "tags": {
     "en": ["photography", "modern", "communication",  "open", "simple", "creative", "sans-serif", "studio", "agency", "production", "film", "performers", "media", "design"],
