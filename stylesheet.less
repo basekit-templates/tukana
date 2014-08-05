@@ -1,9 +1,18 @@
 @import "@{templateCommon}/basekit-bootstrap.less";
 
+@import "@{templateLocal}/css/common-forms.less";
+@import "@{templateLocal}/css/common-text.less";
+@import "@{templateLocal}/css/widgets-blog.less";
+@import "@{templateLocal}/css/widgets-ecom.less";
+
+// Larget than tablet
+@desktop: ~"only screen and (min-width : 769px)";
+// Larger than mobile
+@mobile-up: ~"only screen and (min-width : 480px)";
+
+
 body {
     background-color: @color-swatch1;
-    margin: 0;
-    padding: 0;
 }
 
 .wrapper {
@@ -20,133 +29,88 @@ body {
 }
 
 a {
-    font-family: @font-swatch5-font-family;
-    font-size: @font-swatch5-font-size;
-    font-weight: @font-swatch5-font-weight;
-    color: @color-swatch6;
-    text-decoration: none;
+  color: @color-swatch6;
 }
 
-a:hover {
-    text-decoration: underline
-}
+.widget.content {
+  a {
+      font-family: @font-swatch5-font-family;
+      font-size: @font-swatch5-font-size;
+      font-weight: @font-swatch5-font-weight;
+      color: @color-swatch6;
+      text-decoration: none;
+  }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-p {
-    margin: 0;
-    padding: 0 0 10px;
-}
+  a:hover {
+      text-decoration: underline
+  }
 
-h1 {
-    font-family: @font-swatch1-font-family;
-    font-weight: @font-swatch1-font-weight;
-    color: @font-swatch1-color;
-    line-height: @font-swatch1-line-height;
-    letter-spacing: @font-swatch1-letter-spacing;
-    font-size: @font-swatch1-font-size;
-}
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  p {
+      margin: 0;
+      padding: 0 0 10px;
+  }
+  ul,
+  ol,
+  li {
+      font-family: @font-swatch5-font-family;
+      font-size: @font-swatch5-font-size;
+      font-weight: @font-swatch5-font-weight;
+      line-height: @font-swatch5-line-height;
+      color: @font-swatch5-color;
+      letter-spacing: @font-swatch5-letter-spacing;
+  }
 
-h2 {
-    font-family: @font-swatch2-font-family;
-    font-size: @font-swatch2-font-size;
-    font-weight: @font-swatch2-font-weight;
-    line-height: @font-swatch2-line-height;
-    color: @font-swatch2-color;
-    letter-spacing: @font-swatch2-letter-spacing;
-    a {
-    	font-size: @font-swatch2-font-size;	    
-    }
-}
+  blockquote {
+      padding: 20px;
+      margin:20px;
+      quotes: "\201C""\201D""\2018""\2019";
+      font-family:@font-swatch3-font-family;
+      font-size:@font-swatch3-font-size;
+      font-weight:@font-swatch3-font-weight;
+      line-height:@font-swatch3-line-height;
+      color:@color-swatch6;
+  }
 
-h3 {
-    font-family: @font-swatch3-font-family;
-    font-size: @font-swatch3-font-size;
-    font-weight: @font-swatch3-font-weight;
-    color: @font-swatch3-color;
-    line-height: @font-swatch3-line-height;
-    letter-spacing: @font-swatch3-letter-spacing;
-}
+  blockquote:before {
+      font-family: Arial, serif;
+      color: @color-swatch4;
+      content: open-quote;
+      font-size: 2em;
+      line-height: .1em;
+      margin-right: .1em;
+      vertical-align: -.4em;
+  }
 
-h4 {
-    font-family: @font-swatch4-font-family;
-    font-size: @font-swatch4-font-size;
-    font-weight: @font-swatch4-font-weight;
-    line-height: @font-swatch4-line-height;
-    color: @font-swatch4-color;
-    letter-spacing: @font-swatch4-letter-spacing;
-}
+  blockquote p {
+      display: inline;
+      font-family:@font-swatch5-font-family;
+      font-size:@font-swatch5-font-size;
+      font-weight:@font-swatch5-font-weight;
+      line-height:@font-swatch5-line-height;
+      color:@color-swatch4;
+  }
 
-p {
-    font-family: @font-swatch5-font-family;
-    font-size: @font-swatch5-font-size;
-    font-weight: @font-swatch5-font-weight;
-    line-height: @font-swatch5-line-height;
-    color: @font-swatch5-color;
-    letter-spacing: @font-swatch5-letter-spacing;
-}
-
-ul,
-ol,
-li {
-    font-family: @font-swatch5-font-family;
-    font-size: @font-swatch5-font-size;
-    font-weight: @font-swatch5-font-weight;
-    line-height: @font-swatch5-line-height;
-    color: @font-swatch5-color;
-    letter-spacing: @font-swatch5-letter-spacing;
-}
-
-blockquote {
-    padding: 20px;
-    margin:20px;
-    quotes: "\201C""\201D""\2018""\2019";
-    font-family:@font-swatch3-font-family;
-    font-size:@font-swatch3-font-size;
-    font-weight:@font-swatch3-font-weight;
-    line-height:@font-swatch3-line-height;
-    color:@color-swatch6;
-}
-
-blockquote:before {
-    font-family: Arial, serif;
-    color: @color-swatch4;
-    content: open-quote;
-    font-size: 2em;
-    line-height: .1em;
-    margin-right: .1em;
-    vertical-align: -.4em;
-}
-
-blockquote p {
-    display: inline;
+  ul, ol, li {
     font-family:@font-swatch5-font-family;
     font-size:@font-swatch5-font-size;
-    font-weight:@font-swatch5-font-weight;
+    font-weight: @font-swatch5-font-weight;
     line-height:@font-swatch5-line-height;
-    color:@color-swatch4;
+    color:@font-swatch5-color;
+    letter-spacing: @font-swatch5-letter-spacing;
+  }
+
+  .bk-content-text ul, .bk-content-text ol, .bk-content-text li {
+    padding-left: 1.4em; 
+    text-indent: -1.4em;
+  }
 }
 
-ul, ol, li {
-  font-family:@font-swatch5-font-family;
-  font-size:@font-swatch5-font-size;
-  font-weight: @font-swatch5-font-weight;
-  line-height:@font-swatch5-line-height;
-  color:@font-swatch5-color;
-  letter-spacing: @font-swatch5-letter-spacing;
-}
 
-.bk-content-text ul, .bk-content-text ol, .bk-content-text li {
-  padding-left: 1.4em; 
-  text-indent: -1.4em;
-}
-
-form, .widget.blogsearch {
-	clear: both;
-}
 
 /* ===============================
    CUSTOM CSS
@@ -769,24 +733,10 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
    =============================== */
 
 .widget.dropbox .b-wrap .btn {
-  margin: 0;
-  padding: 20px 22px 20px 45px;
   background-image: image('/images/dropbox-icon.png');
   background-size: 20px;
   background-repeat: no-repeat;
   background-position: 19px center;
-  margin: 2.2em auto;
-  border: none;
-  font-family: @font-swatch7-font-family;
-  font-size: @font-swatch7-font-size;
-  font-weight:@font-swatch7-font-weight;
-  background-color: @font-swatch7-background-color;
-  color: @font-swatch7-color;
-  text-decoration: none;
-  cursor: pointer;
-  &:hover {
-  	background-color: @font-swatch7-background-color-hover;
-  }
 }
 
 /* ===============================
@@ -795,57 +745,14 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
 
 
 .widget.paypalbuynow .widget.button.paypal {
-  margin: 0;
-  padding: 20px 22px 20px 45px;
   background-image: image('/images/paypal.png');
   background-size: 20px;
   background-repeat: no-repeat;
   background-position: 19px center;
-  margin: 2.2em auto;
-  border: none;
-  font-family: @font-swatch7-font-family;
-  font-size: @font-swatch7-font-size;
-  font-weight:@font-swatch7-font-weight;
-  background-color: @font-swatch7-background-color;
-  color: @font-swatch7-color;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.widget.paypalbuynow .widget.button.paypal:hover {
-  background-color: @font-swatch7-background-color-hover;
 }
 
 
 
-
-/* ===============================
-   BUTTON CSS
-   =============================== */
-
-.widget.button button
-{
-  padding: 20px 40px 20px 22px;
-  margin: 0 0 10px;
-  border: none;
-  font-family: @font-swatch7-font-family;
-  font-size: @font-swatch7-font-size;
-  font-weight:@font-swatch7-font-weight;
-  background-color: @font-swatch7-background-color;
-  color: @font-swatch7-color;
-  text-decoration: none;
-  background-image: image('/images/greytriangle-button.png');
-  background-size: 30px;
-  background-position: center right;
-  background-repeat: no-repeat;
-}
-
-
-.widget.button button:hover 
-{
-  background-color: @font-swatch7-background-color-hover;
-  cursor: pointer;
-}
 
 
 /* ===============================
@@ -875,133 +782,39 @@ hr.line.align-right {
     margin: 20px 0px 20px auto
 }
 
+
+
 /* ===============================
-   GALLERY WIDGET
+   CLICK TO CALL
    =============================== */
 
-.widget.gallery {
-	margin-left: 0;
-}
 
-.widget.gallery ul {
-    display:block;
-    margin: 0;
-    padding:0px;
-    list-style: none;
-}
-
-.widget.gallery li {
-    float: left;
-    position: relative;
-    width: 33.3%;
-    padding-bottom: 33%;
-    list-style-type: none;
-}
-
-.widget.gallery li  span.inner {
-    background-position:center center;
-    background-repeat:no-repeat;
-    background-color: @color-swatch1;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-
-.widget.gallery ul li.one-to-one span.inner
-{
-    background-size:100% 100%;
-}
-
-.widget.gallery ul li.portrait span.inner
-{
-    background-size:100% auto;
-}
-
-.widget.gallery ul li.landscape span.inner
-{
-    background-size:auto 100%;
-}
-
-.widget.gallery li span.inner {
-    position: absolute;
-    left: 5px;
-    right: 5px;
-    top: 0px;
-    bottom: 16px;
-    overflow: hidden;
-}
-
-.widget.gallery li span.inner img {
-    display:none;
-}
-
-.widget.gallery ul:before,
-.widget.gallery ul:after {
-  content: " ";
-  display: table;
-}
-.widget.gallery ul:after {
-  clear: both;
-}
-.widget.gallery ul {
-  *zoom: 1;
-}
-
-
-
-
-
-.widget.gallery li span.inner a {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-}
-
-/* Lightbox */
-
-.lb-data .lb-caption, .lb-data .lb-number {
-  font-family:@font-swatch5-font-family;
-  font-size:@font-swatch5-font-size;
-  font-weight: @font-swatch5-font-weight;
-  line-height:@font-swatch5-line-height;
-  color:lighten(@font-swatch5-color,50%);
-}
-
-.lb-data .lb-number {
-  font-size:bkscale(@font-swatch5-font-size,0.9);
-}
-
-
-
-/* =======================================
-   CLICK TO CALL
-   ==================================== */
 
 .widget.clicktocall {
-    padding: 8px 0
+  a, a:hover {
+    padding: 0 1.6em;
+    padding-left: 50px;
+    background-position: 18px center;
+   background-image: image('/images/ic-desktop-call.png');
+    background-repeat: no-repeat;
+    @media @mobile-up {
+      padding: 0;
+      border: none;
+      box-shadow: none;
+      border-radius: 0;
+      color: @font-swatch5-color;
+      background: transparent;
+      text-shadow: none;
+      letter-spacing: 0;
+      font-size: @font-swatch5-font-size;
+      height: auto;
+      line-height: @font-swatch5-line-height;
+      cursor: default;
+    }
+  }
 }
 
-.widget.clicktocall a {
-	display: inline-block;
-	padding: 10px 0;
-	font-family: @font-swatch5-font-family;
-	font-size: @font-swatch5-font-size;
-	font-weight: @font-swatch5-font-weight;
-	line-height: @font-swatch5-line-height;
-	color: @font-swatch5-color;
-	letter-spacing: @font-swatch5-letter-spacing;
-	text-decoration: none;
-	&:hover {
-		background-color: @font-swatch7-background-color-hover;
-	}
-}
 
-.widget.clicktocall a:hover {
-    cursor: pointer;
-}
 
 
 
@@ -1015,8 +828,11 @@ hr.line.align-right {
   ul.twitter {
     li {
       position: relative;
-      min-height: @twitterProfilePicSize;
-      margin-bottom: 1em;
+      min-height: 120px;
+     
+      @media @mobile {
+         min-height: (@twitterProfilePicSize * 0.55 );
+      }
       // footer
       a, time + span, time {
         font-size: bkscale(@font-swatch5-font-size, 0.8);
@@ -1077,87 +893,9 @@ hr.line.align-right {
 
 
 
-/* ===============================
-   CONTACT FORM WIDGET
-   =============================== */
 
-.widget.contactform form {
-    display: block;
-    margin-bottom: 20px;
-    background-color: transparent;
-}
 
-.widget.contactform fieldset {
-    border: none;
-    padding: 0;
-}
 
-.widget.contactform fieldset label {
-    width: 100%;
-    float: left;
-    font-family:@font-swatch5-font-family;
-    font-size:@font-swatch5-font-size;
-    font-weight:@font-swatch5-font-weight;
-    line-height:@font-swatch5-line-height;
-    color: @font-swatch5-color;
-    letter-spacing: @font-swatch5-letter-spacing;
-}
-
-.widget.contactform fieldset input {
-    height: 40px;
-    width: 100%;
-    border: 1px solid @color-swatch4;
-    background-color: @color-swatch1;
-    font-family: @font-swatch5-font-family;
-    font-size: @font-swatch5-font-size;
-    color: @font-swatch5-color;
-    text-indent: 8px;
-    margin-top: 6px;
-    margin-bottom: 30px;
-    padding: 0;
-}
-
-.widget.contactform fieldset input:focus {
-    outline: none;
-    box-shadow: 0 0 5px @color-swatch3;
-}
-
-.widget.contactform fieldset textarea {
-    height: 100px;
-    width: 100%;
-    border: 1px solid @color-swatch4;
-    background-color: @color-swatch1;
-    font-family: @font-swatch5-font-family;
-    font-size: @font-swatch5-font-size;
-    color: @font-swatch5-color;
-    text-indent: 8px;
-    padding-top: 14px;
-    margin-top: 6px;
-    margin-bottom: 20px;
-    resize: none;
-    padding: 0;
-}
-
-.widget.contactform fieldset textarea:focus {
-    outline: none;
-    box-shadow: 0 0 5px @color-swatch3;
-}
-
-.widget.contactform fieldset button.btn, .blog-search-submit-button, .widget.clicktocall a {
-    padding: 20px 40px 20px 22px;
-    margin: 0;
-    border: none;
-    font-family: @font-swatch7-font-family;
-    font-size: @font-swatch7-font-size;
-    font-weight:@font-swatch7-font-weight;
-    background-color: @font-swatch7-background-color;
-    color: @font-swatch7-color;
-    text-decoration: none;
-    background-image: image('/images/greytriangle-button.png');
-    background-size: 30px;
-    background-position: center right;
-    background-repeat: no-repeat;
-}
   
 
 /* ===============================
@@ -1194,27 +932,13 @@ hr.line.align-right {
    TWEET THIS
    =============================== */
 
-.widget.tweet .tweet{
-   margin: 0 0 10px;
-   padding: 14px 0;
-   border: none;
-}
+
 
 .widget.tweet a {
-  padding: 20px 22px 20px 45px;
   background-image: image('/images/social/socialicons-twitter.png');
   background-size: 18px;
   background-repeat: no-repeat;
   background-position: 20px center;
-  margin: 2.2em auto;
-  border: 0;
-  font-family: @font-swatch7-font-family;
-  font-size: @font-swatch7-font-size;
-  font-weight:@font-swatch7-font-weight;
-  background-color: @font-swatch7-background-color;
-  color: @font-swatch7-color;
-  text-decoration: none;
-  letter-spacing: 1px;
   &:hover {
 		background-image: image('/images/social/socialicons-twitter.png');
   }
@@ -1480,45 +1204,8 @@ footer .widget.profile .twitter span {
     letter-spacing: @font-swatch5-letter-spacing;
 }
 
-.widget.profile fieldset input {
-    height: 40px;
-    width: 100%;
-    border: 1px solid @color-swatch4;
-    font-family: @font-swatch5-font-family;
-    font-size: @font-swatch5-font-size;
-    color: @font-swatch5-color;
-    text-indent: 8px;
-    margin-top: 6px;
-    margin-bottom: 20px;
-    padding: 0;
-    background-color: @color-swatch1;
-}
 
-.widget.profile fieldset input:focus {
-    outline: none;
-    box-shadow: 0 0 5px @color-swatch3;
-}
 
-.widget.profile fieldset button.btn {
-  padding: 20px 40px 20px 22px;
-  margin: 0 0 10px;
-  border: none;
-  font-family: @font-swatch7-font-family;
-  font-size: @font-swatch7-font-size;
-  font-weight:@font-swatch7-font-weight;
-  background-color: @font-swatch7-background-color;
-  color: @font-swatch7-color;
-  text-decoration: none;
-  background-image: image('/images/greytriangle-button.png');
-  background-size: 30px;
-  background-position: center right;
-  background-repeat: no-repeat;
-}
-
-.widget.profile fieldset button.btn:hover {
-  background-color: @font-swatch7-background-color-hover;
-  cursor: pointer;
-}
 
 /* ===============================
    LINKED IN
@@ -1575,47 +1262,8 @@ footer .widget.profile .twitter span {
     letter-spacing: @font-swatch5-letter-spacing;
 }
 
-.widget.signupform fieldset input {
-    height: 40px;
-    width: 100%;
-    border: 1px solid @color-swatch4;
-    background-color: @color-swatch1;
-    font-family: @font-swatch5-font-family;
-    font-size: @font-swatch5-font-size;
-    color: @font-swatch5-color;
-    text-indent: 8px;
-    margin-top: 6px;
-    margin-bottom: 20px;
-    float:left;
-    padding: 0;
-}
 
-.widget.signupform fieldset input:focus {
-    outline: none;
-    box-shadow: 0 0 5px @color-swatch3;
-}
 
-.widget.signupform fieldset button.btn {
-    padding: 20px 40px 20px 22px;
-    margin: 0;
-    border: none;
-    background-color: @font-swatch7-background-color;
-    font-family: @font-swatch7-font-family;
-    font-size: @font-swatch7-font-size;
-    font-weight:@font-swatch7-font-weight;
-    background-color: @font-swatch7-background-color;
-    color: @font-swatch7-color;
-    text-decoration: none;
-    background-image: image('/images/greytriangle-button.png');
-    background-size: 30px;
-    background-position: center right;
-    background-repeat: no-repeat;
-}
-
-.widget.signupform fieldset button.btn:hover {
-    background-color: @font-swatch7-background-color-hover;
-    cursor: pointer;
-}
 
 /* ===============================
    SLIDESHOW WIDGET
@@ -1937,66 +1585,6 @@ footer .widget.profile .twitter span {
 
 
 
-  /* CLICK TO CALL */
-
-.widget.clicktocall {
-  padding: 10px 0;
-  a {
-	  display: inline-block;
-  }
-}
-
-.widget.clicktocall a {
-  background-image: image('/images/ic-desktop-call.png');
-  background-color: @font-swatch7-background-color;
-  background-position: 20px center;
-  background-repeat:no-repeat;
-  padding: 20px 20px 20px 47px;
-  margin: 2.2em auto;
-  border: none;
-  font-family: @font-swatch7-font-family;
-  font-size: @font-swatch7-font-size;
-  font-weight:@font-swatch7-font-weight;
-  background-color: @font-swatch7-background-color;
-  color: @font-swatch7-color;
-  text-decoration: none;
-}
-
-.widget.clicktocall a:hover {
-  background-color: @font-swatch7-background-color-hover;
-  cursor: pointer;
-  text-decoration: none;
-  }
-
-  .widget.clicktocall a.justifyleft {
-    text-align: left;
-  }
-
-  .widget.clicktocall a.justifycenter {
-    text-align: center;
-  }
-
-  .widget.clicktocall a.justifyright {
-    text-align: right;
-  }
-
-  .widget.clicktocall a.justifyfull {
-    text-align: justify;
-  }
-
-  .widget.clicktocall a.italic { 
-    font-style: italic;
-  }
-
-  .widget.clicktocall a.bold {
-    font-weight: bold;
-  }
-
-  .widget.clicktocall {
-    padding: 20px 0;
-    display:block;
-  }
-
   /* SLIDESHOW */
 
   .widget.responsiveslideshow .title {
@@ -2013,13 +1601,7 @@ footer .widget.profile .twitter span {
       min-height:initial;
   }
 
-     /* GALLERY */
-
-    .widget.gallery ul.gallery-widget li
-    {
-      width: 50%;
-      padding-bottom: 50%;
-    }
+   
 
     blockquote {
       padding: 10px 0;
@@ -2027,126 +1609,13 @@ footer .widget.profile .twitter span {
     }
 }
 
-// CONSISTANT FORMS
-.widget.profile form fieldset input,
-.widget.contactform fieldset input,
-.widget.signupform fieldset input,
-.widget.contactform fieldset textarea,
-.blog-search-input,
-input[type=email],
-input[type=email].email,
-input[type=search],
-textarea {
-	border: 1px solid darken(@color-swatch2, 10%);
-	background: @color-swatch1;
-	padding: 6px 9px;
-	text-indent: 0;
-	letter-spacing: 0;
-	float: none;
-}
-
-.widget.profile form fieldset input,
-.widget.contactform fieldset input,
-.widget.signupform fieldset input,
-.widget.contactform fieldset textarea,
-input[type=email],
-input[type=email].email,
-input[type=search],
-.blog-search-input,
-.blog-search-submit-button {
-	height: 41px;
-	&:focus {
-		box-shadow: 0 0 5px @color-swatch3;
-	}
-}
-
-.widget.contactform fieldset textarea,
-textarea {
-	resize: vertical;
-	min-height: 200px;
-}
 
 
-// ======= Widget: Twitter
-.widget.twitter {
-  ul.twitter {
-    li {
-      float: left;
-      width: 100%;
-
-      // footer
-      a, time + span, time {
-        font-size: bkscale(@font-swatch5-font-size, 0.8);
-        font-family: @font-swatch5-font-family;
-        line-height: 1;
-        font-weight: normal;
-        color: fade(@color-swatch5,50%);
-        text-decoration: none;
-        @media @mobile {
-          font-size: bkscale(@font-swatch5-font-size, 0.6);
-        }
-      }
-      
-      .twitter-content {
-        p {
-          font-family: @font-swatch5-font-family;
-          a {
-            font-family: @font-swatch5-font-family;
-            font-size: @font-swatch5-font-size;
-            color: @color-swatch6;
-            line-height: @font-swatch5-line-height;
-          }
-        }
-        .bk-full-name {
-          font-size: bkscale(@font-swatch5-font-size, 1);
-          @media @mobile {
-            font-size: bkscale(@font-swatch5-font-size, 0.8);
-          }
-        }
-      }
-    }
-  }
-}
 
 
-input[type="search"]::-webkit-search-decoration {
-	display: none;
-}
 
-.widget.profile fieldset button.btn,
-.widget.signupform fieldset button.btn,
-.blog-search-submit-button {
-	cursor: pointer;
-	padding: 8px 30px 9px 15px;
-	background-position: right -7px center;
-	letter-spacing: 0;
-	background-color: darken(@color-swatch2, 10%);
-	&:hover {
-		background-color: darken(@color-swatch2, 20%);
-	}
-}
 
-.widget.signupform fieldset input,
-.blog-search-input {
-	width: 90%;
-}
 
-.widget.profile form,
-.widget.signupform,
-.blog-search-form {
-	letter-spacing: -3px;
-}
-
-.widget.signupform fieldset label,
-.blog-search-form label {
-	letter-spacing: 0;
-	display: block;
-}
-
-// FIXES
-.blog-post-feature-image-wrap, .menu-item-image-wrap {
-	line-height: 0;
-}
 
 /* ===============================
    4. Menu
@@ -2265,57 +1734,10 @@ input[type="search"]::-webkit-search-decoration {
 @media only screen and (min-width: 1140px) { 
     .wrapper {
         width: 960px;
-        /* 1140px - 10% for margins */
         margin: 0 auto;
     }
 }
 
-// BLOG
-
-.blog-post-feature-image-wrap {
-	background-image: url('http://placehold.it/2250x800');
-	float: right;
-	width: 50%;
-	margin-left: 5%;
-	background-size: cover;
-	background-position: center;
-	height: 220px;
-
-  @media @mobile {
-    float: none;
-    width: auto;
-    margin-left: 0;
-    margin-bottom: 0.5em;
-  }
-
-	img {
-		display: none;
-	}
-}
-
-.blog-post-published-date {
-	display: block;
-}
-
-.blog-post-item {
-	float: left;
-	width: 100%;
-	padding-bottom: 40px;
-}
-
-.clearfix:before,
-.clearfix:after {
-    content: " ";
-    display: table;
-}
-
-.clearfix:after {
-    clear: both
-}
-
-.clearfix {
-    *zoom: 1
-}
 
 
 // ECOM
@@ -2323,109 +1745,6 @@ input[type="search"]::-webkit-search-decoration {
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAPCAYAAAACsSQRAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyNpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MzA0NzQ2MTNGQTA4MTFFM0E5NDJGMkM1NzYzNjQzN0QiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MzA0NzQ2MTJGQTA4MTFFM0E5NDJGMkM1NzYzNjQzN0QiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChNYWNpbnRvc2gpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6OEE4MDZFRkNBRDEwMTFFMzlCOEQ4MTYxOEVDOTBFNzAiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6OEE4MDZFRkRBRDEwMTFFMzlCOEQ4MTYxOEVDOTBFNzAiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5W5Ij9AAAA7ElEQVR42mJgYGB4AcT/ofgZEDP+//+fgRgMBWwgghOIBYBYAmqQCAmGCAPxd3TBnUiuIhZPZGJABZsYSAdL0V1iQIZL2NAN4SXRgD1gfVhC+ycJhgRgGAI1aCkBjb+BeBcQFwMxK0gPC5aAOg7EUVD2QyDeCMSHgfgyED8B4q9IrgYDbIaA4t4XiLcDFf8lJnoY0U1lZGQ8D6ROA/F9IvRPAer/jM0QKSAlTkAzSNMXkEVg12IJWD5ouPSDVWPKewHxVSA2h4thURSLFBN8WOTfQ+WO4zNEEBoLK7DlaCAIA2c6BgYHmBhAgAEA3N89ItZnc8UAAAAASUVORK5CYII=);
 }
 
-.widget.ecomproduct .ecom-product .btn.ecom-product-add-to-cart-btn.added {
-  background-color: @color-swatch3;
-}
-
-.widget.ecomproduct .ecom-product .btn.ecom-product-add-to-cart-btn.added .text:before {
-  color: #000;
-}
-
-.widget.ecomproduct .ecom-product .btn.ecom-product-go-to-checkout-btn,
-.widget.ecomproduct .ecom-product .btn,
-.widget.ecomcheckout .checkout-order-button
-{
-  background-color: @font-swatch7-background-color;
-  color: @font-swatch7-color;
-}
-
-.widget.ecomproduct .ecom-product .ecom-product-long-description {
-  margin-top: 1em;
-}
-
-
-
-
-.widget.ecomproductslist {
-  .ecom-productslist-products {
-    // Filter
-    .productlist-filter {
-      .productlist-display-form {
-        .clearfix;
-        margin-bottom: 1em;
-        text-align: center;
-        .form-group {
-          margin-right: 0.5em;
-          margin-left: 0.5em;
-          display: inline-block;
-          vertical-align: center;
-          @media @mobile {
-            display: block;
-            margin-bottom: 10px;
-          }
-          label {
-            display: block;
-            font-size: bkscale(@font-swatch5-font-size, 0.8);
-            text-align: center;
-            @media @mobile {
-              text-align: left;
-            }
-          }
-          select {
-            -moz-appearance: none;
-            text-indent: 0.01px;
-            -webkit-appearance: none;
-            text-overflow: '';
-            cursor: pointer;
-            position: relative;
-            background-repeat: no-repeat;
-            background-position: right center;
-            margin: 0;
-            color: @color-swatch5;
-            position: relative;
-            display: inline-block;
-            font-family: @font-swatch7-font-family;
-            font-size: @font-swatch7-font-size;
-            font-weight: @font-swatch7-font-weight;
-            line-height: 1.3;
-            border-radius: 0;
-            webkit-box-sizing: border-box;
-            -moz-box-sizing: border-box;
-            box-sizing: border-box;
-            border: 1px solid darken(@color-swatch2, 10%);
-            background-color: @color-swatch1;
-            padding: 0 38px 0 14px;
-            text-indent: 0;
-            letter-spacing: 0;
-            float: none;
-            height: 41px;
-           background-image: image('/images/ui-select-arrow.png');
-
-            @media @mobile {
-              display: block;
-              width: 100%;
-            }
-          }
-        }
-      }
-      .productlist-item-count {
-        text-align: center;
-        clear: both;
-      }
-    }
-  }
-}
-
-
-.svg {
-  .widget.ecomproductslist .ecom-productslist-products .productlist-filter .productlist-display-form .form-group select {
-    background-image: image('/images/ui-select-arrow.svg');
-    background-repeat: no-repeat;
-    background-size: 15px;
-    background-position-x: 93%;
-    background-position-y: 55%;
-  }
-}
 
 
 
