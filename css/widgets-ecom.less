@@ -828,15 +828,15 @@
 				}
 				// Quantity label
 				.basket-summary-quantity {
-					width: 150px;
-					position: absolute;
-					right: 20px;
 					display: block;
-					top: 20px;
 					height: 30px;
 					line-height: 30px;
 					text-align: center;
 					font-size: bkscale(@font-swatch5-font-size, 0.8);
+					width: 150px;
+					position: absolute;
+					right: 10px;
+					top: 10px;
 					@media @bp-checkout-compact {
 						position: relative;
 						right: 0;
@@ -848,11 +848,9 @@
 				.basket-summary-quantitybtn {
 					background-color: transparent;
 					margin: 0;
-					position: absolute;
 					width: 150px;
-					right: 20px;
-					top: 50px;
 					height: 40px;
+					position: relative;
 					@media @bp-checkout-compact {
 						position: relative;
 						right: 0;
