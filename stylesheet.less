@@ -21,7 +21,7 @@ body {
 }
 
 .widget {
- 
+
 }
 
 .main .widget {
@@ -105,7 +105,7 @@ a {
   }
 
   .bk-content-text ul, .bk-content-text ol, .bk-content-text li {
-    padding-left: 1.4em; 
+    padding-left: 1.4em;
     text-indent: -1.4em;
   }
 }
@@ -189,14 +189,14 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
 
       min-width: 30%;
 
-      
+
 
       @media @mobile {
         display: block;
       }
 
       .widget.companyname {
-       
+
       }
     }
     .extendednavigation {
@@ -262,7 +262,7 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
 /* LOGO */
 
 .widget.logo {
-  
+
 }
 
 /* ===============================
@@ -640,6 +640,9 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
     border-radius: 4px;
     cursor: pointer;
     display: inline-block;
+    .more, .less {
+      color: @font-swatch7-color;
+    }
 }
 
 .widget.content span.expand:hover,
@@ -791,7 +794,7 @@ hr.line.align-right {
     li {
       position: relative;
       min-height: 120px;
-     
+
       @media @mobile {
          min-height: (@twitterProfilePicSize * 0.55 );
       }
@@ -819,7 +822,7 @@ hr.line.align-right {
           width: (@twitterProfilePicSize * 0.55);
           height: (@twitterProfilePicSize * 0.55);
         }
-        
+
         img {
           width: 100%;
           height: auto;
@@ -858,7 +861,7 @@ hr.line.align-right {
 
 
 
-  
+
 
 /* ===============================
    REDIRECT WIDGET
@@ -1293,7 +1296,7 @@ footer .widget.profile .twitter span {
   margin-top: -0.3em;
 }
 
-.widget.responsiveslideshow .slideshow-widget .btn-prev, 
+.widget.responsiveslideshow .slideshow-widget .btn-prev,
 .widget.responsiveslideshow .slideshow-widget .btn-next {
     font-size: 0;
     z-index: 11;
@@ -1307,7 +1310,7 @@ footer .widget.profile .twitter span {
 }
 
 .widget.responsiveslideshow .slideshow-widget .btn-next {
-  background: image('/images/greytriangle-right.png') no-repeat center right;   
+  background: image('/images/greytriangle-right.png') no-repeat center right;
 }
 
 .widget.responsiveslideshow .slideshow-widget-controls {
@@ -1329,7 +1332,7 @@ footer .widget.profile .twitter span {
 .widget.responsiveslideshow .slideshow-widget:hover .btn-play.pause
 {
     background: image('/images/slideshow-pause.png') center no-repeat;
-    background-size: contain;  
+    background-size: contain;
 }
 
 .widget.responsiveslideshow .slideshow-widget-controls .dot
@@ -1359,7 +1362,7 @@ footer .widget.profile .twitter span {
    IPAD WIDTH
    =============================== */
 
-@media only screen and (max-width: 768px) { 
+@media only screen and (max-width: 768px) {
     .bk-header {
         margin: 30px 0 30px;
         padding-bottom: 0;
@@ -1479,7 +1482,7 @@ footer .widget.profile .twitter span {
 
     /* SLIDESHOW */
 
-    .widget.responsiveslideshow .slideshow-image-list, 
+    .widget.responsiveslideshow .slideshow-image-list,
     .widget.responsiveslideshow .slideshow-widget {
         height:400px;
         min-height:initial;
@@ -1491,7 +1494,7 @@ footer .widget.profile .twitter span {
    IPHONE WIDTH
    =============================== */
 
-@media only screen and (max-width: 480px) { 
+@media only screen and (max-width: 480px) {
 
     .bk-footer {
       text-align: center;
@@ -1508,7 +1511,7 @@ footer .widget.profile .twitter span {
 
 
 
- 
+
 
     .widget.companyname a {
       font-size: bkscale(@font-swatch10-font-size,0.7);
@@ -1563,7 +1566,7 @@ footer .widget.profile .twitter span {
       min-height:initial;
   }
 
-   
+
 
     blockquote {
       padding: 10px 0;
@@ -1582,38 +1585,38 @@ footer .widget.profile .twitter span {
 /* ===============================
    4. Menu
    =============================== */
- 
+
 .menu-items {
 	width: 100%;
-	
+
 	list-style: none;
 	margin: 20px 0 50px 0;
 	float: left;
 	clear: both;
-	
+
 	-webkit-column-count: 2;
 	-webkit-column-gap: 4em;
 	-webkit-column-rule-color: @color-swatch2;
 	-webkit-column-rule-style: solid;
 	-webkit-column-rule-width: 2px;
-	
+
 	-moz-column-count: 2;
 	-moz-column-gap: 4em;
 	-moz-column-rule-color: @color-swatch2;
 	-moz-column-rule-style: solid;
 	-moz-column-rule-width: 2px;
-	
+
 	column-count: 2;
-	column-gap: 4em;	
+	column-gap: 4em;
 	column-rule-color: @color-swatch2;
 	column-rule-style: solid;
 	column-rule-width: 2px;
 	@media @mobile {
 		-webkit-column-count: 1;
         -moz-column-count: 1;
-        column-count: 1;  
+        column-count: 1;
     }
-	
+
 	.menu-item {
 		padding: 1px 20px 45px;
 	}
@@ -1636,7 +1639,7 @@ footer .widget.profile .twitter span {
 		@media @mobile {
 			-webkit-column-count: 1;
             -moz-column-count: 1;
-            column-count: 1;  
+            column-count: 1;
         }
 		&.bk1-columns {
 			-webkit-column-count: 1;
@@ -1652,7 +1655,7 @@ footer .widget.profile .twitter span {
 }
 
 .menu .menu-subsection {
-  
+
 	clear: both;
 	float: left;
 	padding: 0;
@@ -1693,7 +1696,7 @@ footer .widget.profile .twitter span {
 	}
 }
 
-@media only screen and (min-width: 1140px) { 
+@media only screen and (min-width: 1140px) {
     .wrapper {
         width: 960px;
         margin: 0 auto;
