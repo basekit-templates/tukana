@@ -281,9 +281,6 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
    STANDARD NAVIGATION
    =============================== */
 
-.widget.navigation {
-
-}
 
 .widget.navigation ul {
     padding: 0;
@@ -363,8 +360,8 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
     float: left;
     display: block;
     &.selected a {
-      background: @color-swatch3;
-      color: @color-swatch5;
+      background: @font-swatch6-background-color-hover;
+      color: @font-swatch6-color-hover;
       @media @tablet {
         padding-left: 5px;
         padding-right: 5px;
@@ -1708,11 +1705,59 @@ footer .widget.profile .twitter span {
 
 
 
-// ECOM
+/* ===============================
+   ECOM
+   =============================== */
+
 .widget.ecombasket .ecombasket-pull p:before, .widget.ecomproduct .ecom-product .btn.ecom-product-add-to-cart-btn .text:before {
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAPCAYAAAACsSQRAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyNpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MzA0NzQ2MTNGQTA4MTFFM0E5NDJGMkM1NzYzNjQzN0QiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MzA0NzQ2MTJGQTA4MTFFM0E5NDJGMkM1NzYzNjQzN0QiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChNYWNpbnRvc2gpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6OEE4MDZFRkNBRDEwMTFFMzlCOEQ4MTYxOEVDOTBFNzAiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6OEE4MDZFRkRBRDEwMTFFMzlCOEQ4MTYxOEVDOTBFNzAiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5W5Ij9AAAA7ElEQVR42mJgYGB4AcT/ofgZEDP+//+fgRgMBWwgghOIBYBYAmqQCAmGCAPxd3TBnUiuIhZPZGJABZsYSAdL0V1iQIZL2NAN4SXRgD1gfVhC+ycJhgRgGAI1aCkBjb+BeBcQFwMxK0gPC5aAOg7EUVD2QyDeCMSHgfgyED8B4q9IrgYDbIaA4t4XiLcDFf8lJnoY0U1lZGQ8D6ROA/F9IvRPAer/jM0QKSAlTkAzSNMXkEVg12IJWD5ouPSDVWPKewHxVSA2h4thURSLFBN8WOTfQ+WO4zNEEBoLK7DlaCAIA2c6BgYHmBhAgAEA3N89ItZnc8UAAAAASUVORK5CYII=);
+}
+
+.widget.ecomfeaturedproducts .ecom-featuredproducts-wrap .ecom-featuredproducts-product .ecom-featuredproducts-info .ecom-featuredproducts-title {
+  text-align: left;
+}
+
+.widget.ecomfeaturedproducts .ecom-featuredproducts-wrap .ecom-featuredproducts-product .ecom-featuredproducts-info .ecom-featuredproducts-price {
+  color: @color-swatch5;
+  padding: 5px 10px;
 }
 
 
 
 
+/* ===============================
+   BLOG
+   =============================== */
+
+.blogpostlist {
+  .clearfix;
+}
+
+.widget.blogpostlist .blog-post-list .blog-post-item .blog-post-more-link {
+  float: left;
+  width: 40%;
+}
+
+.widget.blogpostlist .blog-post-list .blog-post-item .blog-post-date {
+  float: left;
+  width: auto;
+}
+
+.widget.blogpostlist .blog-post-list .blog-post-item .blog-post-feature-image-wrap {
+  height: 300px;
+}
+
+.widget.blogpost .blog-post-item .blog-post-feature-image-wrap {
+  max-width: 100%;
+  height: 300px;
+  float: left;
+}
+
+.widget.blogpost .blog-post-item .blog-post-title-content-wrap h1.blog-post-title {
+  padding: 20px 0 10px;
+  clear: both;
+}
+
+.widget.blogpost .blog-post-item .blog-post-title-content-wrap .blog-post-content {
+  padding: 0;
+}
