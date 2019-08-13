@@ -18,7 +18,7 @@
 
 	</head>
 
-	<body class="{{ page.backgroundClass }}">
+	<body {{ isV10sSite ? 'id="migrated-site"' : '' }} class="{{ page.backgroundClass }}">
 
 		<div class="bk-pt-default">
 

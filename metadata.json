@@ -4,8 +4,7 @@
 	"screenshot":"tukana-screenshot.jpg",
     "templateType":"standard",
     "pageTypes": ["home"],
-    "versionTenCompatible": true,
-
+    "versionTenCompatible": 1,
     "tags": {
     "en": ["photography", "modern", "communication",  "open", "simple", "creative", "sans-serif", "studio", "agency", "production", "film", "performers", "media", "design"],
     "es": ["fotografico", "moderno", "comunicacion", "abierto", "simple", "creativo", "sans-serif", "estudio", "agencia", "productora", "peliculas", "actores", "comunicacion", "diseño"],
