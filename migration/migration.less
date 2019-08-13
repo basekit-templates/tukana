@@ -16,15 +16,40 @@
     max-width: 100%;
     margin: 0;
   }
-
-  // Main content spacing (replace with corresponding template class)
-  .main {
-    padding: 0;
-  }
+  
 
   // Widget overflow to allow 10S overlays to display correctly
   .widget.content {
     overflow: inherit;
+  }
+  
+  .row.widget {
+      margin-bottom: 0;
+  }
+  .row .responsivecolumns {
+      display: flex;
+  }
+  
+  .feature {
+      overflow: inherit;
+  }
+  .feature-img-one {
+      float: inherit;
+  }
+  .feature-img-one,
+  .feature-img-two,
+  .feature-img-three{
+      @media @mobile {
+          float: inherit;
+      }
+  }
+  .feature-img-three {
+      bottom: inherit;
+      margin-top: -93px;
+      
+      @media @mobile {
+          margin-top: 0;
+      }
   }
 
 
@@ -97,12 +122,7 @@
 
   // Adds spacing to the section when a widget is before it
   #page-zones__main > .widget:not(.row) + .row {
-    margin-bottom: @spacing--other;
     margin-top: @spacing--other;
-
-    &:not(:last-child) {
-      margin-bottom: 0;
-    }
   }
 
 
