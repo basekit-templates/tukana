@@ -11,10 +11,22 @@
 
 
   // Template wrapper (replace with corresponding template classes)
+  .main {
+      border-bottom: 0;
+  }
   .main.wrapper {
     width: 100%;
     max-width: 100%;
     margin: 0;
+  }
+  
+  .bk-footer {
+      padding-top: 0;
+      
+      .wrapper {
+        padding-top: 1em;
+        border-top: 1px solid darken(@color-swatch2,10%);
+      }
   }
   
 
@@ -26,10 +38,10 @@
   .row.widget {
       margin-bottom: 0;
   }
-  .row .responsivecolumns {
-      display: flex;
-  }
   
+  .feature-container {
+      padding-bottom: 0;
+  }
   .feature {
       overflow: inherit;
   }
@@ -45,7 +57,7 @@
   }
   .feature-img-three {
       bottom: inherit;
-      margin-top: -93px;
+      margin-top: -112px;
       
       @media @mobile {
           margin-top: 0;
@@ -62,7 +74,7 @@
   // Replace with corresponding template values
   @container-width: 960px;
 
-  @spacing__first--desktop: 40px;
+  @spacing__first--desktop: 43px;
   @spacing__first--tablet:  30px;
   @spacing__first--mobile:  20px;
 
