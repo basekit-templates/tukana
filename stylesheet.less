@@ -10,14 +10,6 @@
 // Larger than mobile
 @mobile-up: ~"only screen and (min-width : 480px)";
 
-.flex-display(@display: flex) {
-    display: ~"-webkit-@{display}";
-    display: ~"-moz-@{display}";
-    display: ~"-ms-@{display}box"; // IE10 uses -ms-flexbox
-    display: ~"-ms-@{display}"; // IE11
-    display: @display;
-}
-
 .flex-wrap(@wrap: nowrap) {
   -webkit-flex-wrap: @wrap;
      -moz-flex-wrap: @wrap;
