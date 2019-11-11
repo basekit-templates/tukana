@@ -9,6 +9,18 @@
   // Stylseheet overrides
   // -----------------------------
 
+  .feature-container {
+    margin-top: 40px;
+  }
+
+
+  .feature .widget-overlay:hover, 
+  .feature .widget-overlay.hover {
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+  }
 
   // Template wrapper (replace with corresponding template classes)
   .main {
@@ -43,31 +55,6 @@
   
   .row.widget {
       margin-bottom: 0;
-  }
-  
-  .feature-container {
-      padding-bottom: 0;
-  }
-  .feature {
-      overflow: inherit;
-  }
-  .feature-img-one {
-      float: inherit;
-  }
-  .feature-img-one,
-  .feature-img-two,
-  .feature-img-three{
-      @media @mobile {
-          float: inherit;
-      }
-  }
-  .feature-img-three {
-      bottom: inherit;
-      margin-top: -112px;
-      
-      @media @mobile {
-          margin-top: 0;
-      }
   }
 
 
