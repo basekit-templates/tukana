@@ -1,21 +1,9 @@
 <!doctype html>
-
-<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
-
-<!--[if IE 7]> <html class="no-js ie7 oldie" lang="en"> <![endif]-->
-
-<!--[if IE 8]> <html class="no-js ie8 oldie" lang="en"> <![endif]-->
-
-<!--[if gt IE 8]><!-->
 <html class="no-js" lang="{{ page.seoLang }}">
-<!--<![endif]-->
 
 	<head>
-
 		{% include "head.twig" %}
-
 		{% include basekit.headScript %}
-
 	</head>
 
 	<body {{ isV10sSite ? 'id="migrated-site"' : '' }} class="{{ page.backgroundClass }}">
@@ -37,7 +25,7 @@
 					return !!document.createElementNS && !! document.createElementNS('http://www.w3.org/2000/svg', 'svg').createSVGRect
 				}
 				if (supportsSVG()) document.documentElement.className += ' svg'
-			}()
+			}();
 		</script>
 
 		{% include basekit.bodyScript %}
